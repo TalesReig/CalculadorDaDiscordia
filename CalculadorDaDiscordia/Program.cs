@@ -22,8 +22,16 @@ namespace CalculadorDaDiscordia
 
                 Console.Write("Digite o primeiro valor: ");
                 valor1 = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Digite o segundo valor: ");
-                valor2 = Convert.ToInt32(Console.ReadLine());
+                do
+                {
+                    Console.Write("Digite o segundo valor: ");
+                    valor2 = Convert.ToInt32(Console.ReadLine());
+                    if(operacao == ':' && valor2 == 0)
+                    {
+                        Console.WriteLine("Não é possível dividir por 0");
+                    }
+                } while (operacao == ':' && valor2 == 0);
+
 
                 switch (operacao)
                 {
@@ -39,6 +47,10 @@ namespace CalculadorDaDiscordia
 
                     case '*':
                         resultado = valor1 * valor2;
+                        Console.WriteLine("Resultado: " + resultado);
+                        break;
+                    case ':':
+                        resultado = (valor1 / valor2) + (valor1 % valor2);
                         Console.WriteLine("Resultado: " + resultado);
                         break;
                 }
