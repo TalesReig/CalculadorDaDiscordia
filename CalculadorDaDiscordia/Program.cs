@@ -36,6 +36,11 @@ namespace CalculadorDaDiscordia
                         resultado = valor1 - valor2;
                         Console.WriteLine("Resultado: " + resultado);
                         break;
+
+                    case '*':
+                        resultado = valor1 * valor2;
+                        Console.WriteLine("Resultado: " + resultado);
+                        break;
                 }
 
                 do
