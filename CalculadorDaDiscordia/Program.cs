@@ -16,7 +16,7 @@ namespace CalculadorDaDiscordia
             {
                 do
                 {
-                    Console.Write("Escola a operação q deseja realizar(+),(-),(*) ou (:): ");
+                    Console.Write("Escolha a operação que deseja realizar(+),(-),(*) ou (:): ");
                     operacao = Convert.ToChar(Console.ReadLine());
                 } while (operacao != '+' && operacao != '-' && operacao != '*' && operacao != ':');
 
@@ -29,6 +29,11 @@ namespace CalculadorDaDiscordia
                 {
                     case '+':
                         resultado = valor1 + valor2;
+                        Console.WriteLine("Resultado: " + resultado);
+                        break;
+
+                    case '-':
+                        resultado = valor1 - valor2;
                         Console.WriteLine("Resultado: " + resultado);
                         break;
                 }
